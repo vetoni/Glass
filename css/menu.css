@@ -1,0 +1,73 @@
+.menu {
+    font-family: Arial;
+    list-style-type: none;       
+    box-shadow: 0 5px 5px -1px rgba(140,150,159,0.75);
+    padding: 0;
+    overflow: hidden;
+    background-color: #477CB7;    
+    border: 1px solid #477CB7;
+    border-radius: 5px;     
+    display: inline-block;
+    margin: 0;
+}
+.menu li {    
+    position: relative;    
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    z-index: 1; 
+    color: #1A467F;
+    margin: 0 6px 0 -5px;
+    padding: 0 26px 0 10px;        
+}
+.menu li.active {
+    color: white;
+}
+.menu img {
+    vertical-align: middle;
+    margin: 0 5px;
+}
+.menu li:last-child {
+    margin-right: -5px;
+}
+.menu li:before, .menu li:after {
+    content: "";
+    width: 100%;
+    height: 50%;    
+    position: absolute;    
+    z-index: -1;
+}
+.menu li:before {
+    top: 0; left: 0;
+    -moz-transform: skew(25deg, 0);
+    -webkit-transform: skew(25deg, 0);
+    -ms-transform: skew(25deg, 0);
+    transform: skew(25deg, 0);
+    background: -moz-linear-gradient(top, #82bbe8 0%, #659fd9 100%);
+    background: -webkit-linear-gradient(top, #82bbe8 0%, #659fd9 100%);
+    background: -ms-linear-gradient(top, #82bbe8 0%, #659fd9 100%);    
+    background: linear-gradient(top, #82bbe8 0%, #659fd9 100%);
+}
+.menu li:after {
+    top: 50%; left: 0;
+    -moz-transform: skew(-25deg, 0);
+    -webkit-transform: skew(-25deg, 0);
+    -ms-transform: skew(-25deg, 0);
+    transform: skew(-25deg, 0);
+    background: -moz-linear-gradient(top, #659fd9 0%, #4882ca 100%);
+    background: -webkit-linear-gradient(top, #659fd9 0%, #4882ca 100%);
+    background: -ms-linear-gradient(top, #659fd9 0%, #4882ca 100%);    
+    background: linear-gradient(top, #659fd9 0%, #4882ca 100%);
+}
+.menu li.active:before {     
+    background: -moz-linear-gradient(top, #589dd2 0%, #4177b3 100%);
+    background: -webkit-linear-gradient(top, #589dd2 0%, #4177b3 100%);
+    background: -ms-linear-gradient(top, #589dd2 0%, #4177b3 100%);
+    background: linear-gradient(top, #589dd2 0%, #4177b3 100%);
+}
+.menu li.active:after {        
+    background: -moz-linear-gradient(top, #4177b3 0%, #2a5792 100%);
+    background: -webkit-linear-gradient(top, #4177b3 0%, #2a5792 100%);
+    background: -ms-linear-gradient(top, #4177b3 0%, #2a5792 100%);
+    background: linear-gradient(top, #4177b3 0%, #2a5792 100%);
+}

@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Параметры</title>
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/select-spin.js"></script>
+</head>
+<body>
+    <ul class="menu">
+        <li><img src="img/menu-ico1.png" />Описание</li>
+        <li><img src="img/menu-ico2.png" />Ингредиенты</li>
+        <li class="active"><img src="img/menu-ico3.png" />Параметры</li>
+        <li><img src="img/menu-ico4.png" />Бокалы</li>
+    </ul>
+    <form class="wizard" method="post" action="stemware.html">
+        <p class="caption">
+            <img src="img/tarelka.png" />
+            Параметры приготовления
+        </p>
+        <label class="param-inp">
+            Порций<div class="spin"><input value="1" min="0" /></div>
+        </label>
+        <label class="param-inp">
+            Время
+            <select class="dropdown small">
+                <option>5 мин</option>
+                <option>10 мин</option>
+                <option>15 мин</option>
+            </select>
+        </label>
+        <label class="param-inp">
+            Сложность
+            <select class="dropdown medium">
+                <option>просто</option>
+                <option>сложно</option>
+                <option>анриал</option>
+            </select>
+        </label>
+        <label class="param-inp">
+            Метод
+            <select class="dropdown medium">
+                <option>в шейкере</option>
+                <option>в блендере</option>
+                <option>в бокале</option>
+            </select>
+        </label>
+        <p>
+            <img src="img/bloody-mary.png" />
+            Тип коктейля
+        </p>
+        <label class="param-inp">
+            По крепости
+            <select class="dropdown medium">
+                <option>просто</option>
+                <option>сложно</option>
+                <option>анриал</option>
+            </select>
+        </label>
+        <label class="param-inp">
+            На основе
+            <select class="dropdown medium">
+                <option>просто</option>
+                <option>сложно</option>
+                <option>анриал</option>
+            </select>
+        </label>
+        <label class="param-inp">
+            По типу
+            <select class="dropdown medium">
+                <option>просто</option>
+                <option>сложно</option>
+                <option>анриал</option>
+            </select>
+        </label>
+        <p>
+            <img src="img/tags.png" />
+            Теги
+        </p>
+        <p class="tags">
+            <label><input type="checkbox" name="t" checked /><span>Бодрящие</span></label>
+            <label><input type="checkbox" name="t" checked /><span>Соленые</span></label>
+            <label><input type="checkbox" name="t" checked /><span>Необыч. по употр.</span></label>
+            <label><input type="checkbox" name="t" /><span>Горькие</span></label>
+            <label><input type="checkbox" name="t" /><span>Травяные</span></label>
+            <label><input type="checkbox" name="t" /><span>Для компании</span></label>
+            <label><input type="checkbox" name="t" /><span>Кислые</span></label>
+            <label><input type="checkbox" name="t" /><span>Тропические</span></label>
+            <label><input type="checkbox" name="t" /><span>Для друзей</span></label>
+            <label><input type="checkbox" name="t" /><span>Сладкие</span></label>
+            <label><input type="checkbox" name="t" /><span>Фруктовые</span></label>
+            <label><input type="checkbox" name="t" /><span>Сладкие</span></label>
+        </p>
+        <p>
+            <button class="back" type="button" onclick="window.location='ingredients.html'">Ингридиенты</button>
+            <button class="next" type="submit">Бокалы</button>
+        </p>
+    </form>
+</body>
+</html>

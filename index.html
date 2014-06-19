@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ингредиенты</title>
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/select-spin.js"></script>
+</head>
+<body>
+    <ul class="menu">
+        <li class="active"><img src="img/menu-ico1.png" />Описание</li>
+        <li><img src="img/menu-ico2.png" />Ингредиенты</li>
+        <li><img src="img/menu-ico3.png" />Параметры</li>
+        <li><img src="img/menu-ico4.png" />Бокалы</li>
+    </ul>    
+    <form class="wizard" method="post" action="ingredients.html">        
+        <p class="caption">
+            <img src="img/note.png" />
+            Описание            
+        </p>
+        <div class="upload">
+            <img src="img/whitebokal.png" />
+            <button class="default" type="button">Загрузить</button>
+        </div>
+        <div class="description">
+            <input class="textbox" type="text" placeholder="Название коктейля" />
+            <input class="textbox" type="text" placeholder="Альтернативное название через запятую" />
+            <textarea class="textbox" placeholder="Краткое описание" rows="5"></textarea>            
+        </div>         
+        <textarea class="textbox" placeholder="Инструкция для приготовления" rows="5"></textarea>       
+        <p>                        
+            <button class="next" type="submit">Ингредиенты</button>
+        </p>
+</form>
+</body>
+</html>
