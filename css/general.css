@@ -79,7 +79,10 @@
     top: -1px;
     width: 27px;    
     height: 100%;
-    background: -webkit-linear-gradient(top, #9AC8ED 0%, #528DD5 100%);  
+    background-image: -webkit-linear-gradient(top, #9AC8ED, #528DD5);  
+    background-image:    -moz-linear-gradient(top, #9AC8ED, #528DD5);  
+    background-image:     -ms-linear-gradient(top, #9AC8ED, #528DD5);  
+    background-image:         linear-gradient(top, #9AC8ED, #528DD5);  
     border-radius: 0 3px 3px 0;  
     border: 1px solid #559BD0;            
 }
@@ -113,7 +116,9 @@
 /*-------------Спинер----------------------------*/
 input::-webkit-outer-spin-button,	
 input::-webkit-inner-spin-button {	    
-    -webkit-appearance: none;	 
+    -moz-appearance: none;	 
+    -webkit-appearance: none;	  
+    appearance: none;	 
     margin: 0;
 }
 .spin {
@@ -183,14 +188,15 @@ input::-webkit-inner-spin-button {
     border: 1px solid #559BD0;    
     outline: 0;
     height: 24px; 
-    background: -webkit-linear-gradient(top, #9AC8ED 0%, #528DD5 100%);    
-    background: -moz-linear-gradient(top, #9AC8ED 0%, #528DD5 100%);    
-    background: -ms-linear-gradient(top, #9AC8ED 0%, #528DD5 100%);    
-    background: linear-gradient(top, #9AC8ED 0%, #528DD5 100%);    
+    background: -webkit-linear-gradient(top, #9AC8ED, #528DD5);    
+    background:    -moz-linear-gradient(top, #9AC8ED, #528DD5);    
+    background:     -ms-linear-gradient(top, #9AC8ED, #528DD5);    
+    background:         linear-gradient(top, #9AC8ED, #528DD5);    
     padding: 1px 10px;
     min-width: 80px;
     border-radius: 0 3px 3px 0;
-    cursor: pointer;
+    cursor: pointer; 
+    overflow: visible;
 }
 .default {
     border-radius: 3px;
@@ -209,11 +215,14 @@ input::-webkit-inner-spin-button {
     display: block;
     width: 16px;
     height: 16px;     
-    background: -webkit-linear-gradient(-45deg, #9AC8ED 0%, #528DD5 100%);   
     -webkit-transform:  rotate(45deg);        
     -moz-transform:  rotate(45deg);        
     -ms-transform:  rotate(45deg);        
-    transform:  rotate(45deg);        
+    transform:  rotate(45deg);               
+    background: -webkit-linear-gradient(-45deg, #9AC8ED, #528DD5);       
+    background:    -moz-linear-gradient(-45deg, #9AC8ED, #528DD5);       
+    background:     -ms-linear-gradient(-45deg, #9AC8ED, #528DD5);       
+    background: 	linear-gradient(135deg, #9AC8ED, #528DD5);        
 }
 .back:before {
     left: -10px;
@@ -234,10 +243,10 @@ input::-webkit-inner-spin-button {
 .back:hover:before,
 .next:hover,
 .next:hover:after {
-    background: -webkit-linear-gradient(top, #528DD5 0%, #528DD5 100%);
-    background: -moz-linear-gradient(top, #528DD5 0%, #528DD5 100%);
-    background: -ms-linear-gradient(top, #528DD5 0%, #528DD5 100%);
-    background: linear-gradient(top, #528DD5 0%, #528DD5 100%);
+    background-image: -webkit-linear-gradient(top, #528DD5 , #528DD5); 
+    background-image:    -moz-linear-gradient(top, #528DD5, #528DD5); 
+    background-image:     -ms-linear-gradient(top, #528DD5, #528DD5); 
+    background-image:         linear-gradient(top, #528DD5, #528DD5);
 }
 .wizard .back {
     float: left;
@@ -269,10 +278,10 @@ input::-webkit-inner-spin-button {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: -webkit-linear-gradient(top, #8cbfe9 0, #5e92d1 100%);
-    background: -ms-linear-gradient(top, #8cbfe9 0, #5e92d1 100%);
-    background: -moz-linear-gradient(top, #8cbfe9 0, #5e92d1 100%);    
-    background: linear-gradient(top, #8cbfe9 0, #5e92d1 100%);
+    background: -webkit-linear-gradient(top, #8cbfe9, #5e92d1);
+    background:     -ms-linear-gradient(top, #8cbfe9, #5e92d1);
+    background:    -moz-linear-gradient(top, #8cbfe9, #5e92d1);    
+    background:         linear-gradient(top, #8cbfe9, #5e92d1);
     filter: alpha(opacity=90);
     -moz-opacity: .9;
     -khtml-opacity: .9;
@@ -403,9 +412,7 @@ textarea {
 .wizard .upload .default { width: 100%; }
 
 input[type="checkbox"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    display: none;
     border: 0;
     outline: 0;
 }
